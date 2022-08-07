@@ -1,0 +1,26 @@
+{
+  "name": "express-multitenant-multi-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migration-by-tenant:up": "node ./src/scripts/executeMigrationByTenant.js up",
+    "migration-by-tenant:latest": "node ./src/scripts/executeMigrationByTenant.js latest",
+    "migration-by-tenant:down": "node ./src/scripts/executeMigrationByTenant.js down",
+    "migration:up": "node ./src/scripts/executeMigrationAllTenants.js up",
+    "migration:latest": "node ./src/scripts/executeMigrationAllTenants.js latest",
+    "migration:down": "node ./src/scripts/executeMigrationAllTenants.js down",
+    "seed:run": "node ./src/scripts/executeSeedAllTenants.js",
+    "start:dev": "nodemon ./src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "knex": "^2.2.0",
+    "nodemon": "^2.0.19",
+    "pg": "^8.7.3"
+  }
+}
